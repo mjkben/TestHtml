@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#menu-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+.node {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.node:hover, .node.expanded {
+    transform: scale(1.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.central-node {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #3498db; /* Bleu pour le nœud central */
+}
+
+.level-1 {
+    background-color: #e74c3c; /* Rouge */
+}
+
+.level-2 {
+    background-color: #2ecc71; /* Vert */
+}
+
+.level-3 {
+    background-color: #f1c40f; /* Jaune */
+}
